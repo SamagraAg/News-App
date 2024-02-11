@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
-import NewsComponent from './NewsComponent'
+import NewsItem from './NewsItem'
 
 export class News extends Component {
     render() {
         return (
-            <>
-            This is news section
-            <NewsComponent></NewsComponent>
-            <NewsComponent></NewsComponent>
-            </>
+            <div>
+                This is news component
+                <NewsItem></NewsItem>
+                <NewsItem></NewsItem>
+                <NewsItem></NewsItem>
+            </div>
         )
     }
 }
