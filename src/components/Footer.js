@@ -5,12 +5,13 @@ export default class Footer extends Component {
         page: 1
     }
     render() {
+        let {handlePrev, handleNext} = this.props
         return (
             <div className="container">
                 <div class="d-flex justify-content-between">
-                    <button type="button" class="btn btn-dark btn-sm">&laquo; Previous</button>
+                    <button onClick={handlePrev} type="button" class="btn btn-dark btn-sm">&laquo; Previous</button>
                     <p>Page: {this.state.page}</p>
-                    <button type="button" class="btn btn-dark btn-sm">Next &raquo;</button>
+                    <button onClick={handleNext} type="button" class="btn btn-dark btn-sm">Next &raquo;</button>
                 </div>
             </div>
         )

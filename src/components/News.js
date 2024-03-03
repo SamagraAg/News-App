@@ -11,10 +11,10 @@ export class News extends Component {
         };
     }
     async componentDidMount() {
-        const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`
+        const url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&page=${this.props.page}`
         const response = await fetch(url);
         const parsedResponse = await response.json()
-        this.setState({articles:parsedResponse.articles})
+        this.setState({ articles: parsedResponse.articles })
     }
     render() {
         return (
