@@ -16,14 +16,14 @@ export default class App extends Component {
   }
   handleNext() {
     const newPage = this.state.page + 1
-    console.log(newPage)
     this.setState({ page: newPage })
+    console.log(this.state.page)
   }
   handlePrev() {
-    if(this.state.page == 1) return;
+    if(this.state.page === 1) return;
     const newPage = this.state.page - 1
-    console.log(newPage)
     this.setState({ page: newPage })
+    console.log(this.state.page)
   }
   author = `Samagra`
 
